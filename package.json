@@ -1,0 +1,37 @@
+{
+  "name": "@jeroendruwe/aem-multitenancy-component-library",
+  "version": "0.0.3",
+  "author": "Jeroen Druwé",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/aem-multitenancy-component-library.umd.js",
+  "module": "./dist/aem-multitenancy-component-library.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/aem-multitenancy-component-library.es.js",
+      "require": "./dist/aem-multitenancy-component-library.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build1": "vite build && vue-tsc --emitDeclarationOnly",
+    "build": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.10",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^8.3.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.31.1"
+  }
+}
